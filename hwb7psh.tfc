@@ -1,0 +1,48 @@
+.v x1,x2,x3,x4,x5,x6,x7,s1,s2,s3
+.i x1,x2,x3,x4,x5,x6,x7
+.o x1,x2,x3,x4,x5,x6,x7
+.c 0,0,0
+BEGIN
+# t4 x1,s1,s2,s3
+# t3 x1,s1,s2
+t2 x1,s1
+# t4 x2,s1,s2,s3
+t3 x2,s1,s2
+t2 x2,s1
+# t4 x3,s1,s2,s3
+t3 x3,s1,s2
+t2 x3,s1
+t4 x4,s1,s2,s3
+t3 x4,s1,s2
+t2 x4,s1
+t4 x5,s1,s2,s3
+t3 x5,s1,s2
+t2 x5,s1
+t4 x6,s1,s2,s3
+t3 x6,s1,s2
+t2 x6,s1
+t4 x7,s1,s2,s3
+t3 x7,s1,s2
+t2 x7,s1
+# fredkin 1 bit, dist 1
+f3 s1,x1,x2
+f3 s1,x3,x4
+f3 s1,x5,x6
+f3 s1,x1,x3
+f3 s1,x5,x7
+f3 s1,x1,x5
+# fredkin 2 bit, dist 2
+f3 s2,x1,x3
+f3 s2,x2,x4
+f3 s2,x5,x7
+f3 s2,x1,x5
+f3 s2,x2,x6
+f3 s2,x1,x2
+# fredkin 3 bit, dist 4
+f3 s3,x1,x5
+f3 s3,x2,x6
+f3 s3,x3,x7
+f3 s3,x1,x2
+f3 s3,x3,x4
+f3 s3,x1,x3
+END

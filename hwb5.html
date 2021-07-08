@@ -1,0 +1,416 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="hwb5_files/filelist.xml">
+<link rel=Edit-Time-Data href="hwb5_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Reversible Benchmarks</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Koti</o:Author>
+  <o:LastAuthor>Koti</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:Created>2017-03-03T16:14:00Z</o:Created>
+  <o:LastSaved>2017-05-15T14:36:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>221</o:Words>
+  <o:Characters>1261</o:Characters>
+  <o:Company>&lt;arabianhorse&gt;</o:Company>
+  <o:Lines>10</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1480</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>160</w:Zoom>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<meta name=Author content="Dmitri Maslov">
+<meta name=KeyWords content="reversible logic, benchmarks, synthesis">
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="5122"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white background="Plata%20svetlozelenaja1.jpe" lang=EN-US
+link=blue vlink=blue style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span style='color:#000066'>Reversible
+Logic Synthesis Benchmarks Page</span></h1>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:10.0pt;color:black'>you are in...</span><span
+style='color:black'> </span></b><b><span style='font-size:18.0pt;color:#330000'>Main\hwb5</span></b></p>
+
+<p>Function <a href="hwb5.txt"><i>hwb5</i></a> is the hidden weighted bit
+function with parameter <i>N</i>=5. <br>
+&nbsp; </p>
+
+<table class=MsoNormalTable border=1 cellpadding=0 width="100%"
+ style='width:100.0%;mso-cellspacing:1.5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=63 style='width:46.95pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Picture</b></p>
+  </td>
+  <td width=209 style='width:156.4pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Machine-readable
+  version</b></p>
+  </td>
+  <td width=75 style='width:56.2pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Model</b></p>
+  </td>
+  <td width=81 style='width:60.65pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Garbage</b></p>
+  </td>
+  <td width=95 style='width:71.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Gate count</b></p>
+  </td>
+  <td width=112 style='width:84.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Quantum cost</b></p>
+  </td>
+  <td width=349 style='width:261.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Author(s)</b></p>
+  </td>
+  <td width=162 style='width:121.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Date</b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=63 style='width:46.95pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="hwb5d1.html">here</a></p>
+  </td>
+  <td width=209 style='width:156.4pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a href="hwb5tc.tfc">here</a></p>
+  </td>
+  <td width=75 style='width:56.2pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>GT</p>
+  </td>
+  <td width=81 style='width:60.65pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0<sup>m</sup></p>
+  </td>
+  <td width=95 style='width:71.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>55</p>
+  </td>
+  <td width=112 style='width:84.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>313</p>
+  </td>
+  <td width=349 style='width:261.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Maslov, Dueck,
+  Miller</p>
+  </td>
+  <td width=162 style='width:121.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>June, 2004</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=63 style='width:46.95pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="hwb5d2.html">here</a></p>
+  </td>
+  <td width=209 style='width:156.4pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="hwb5_fc.tfc">here</a></p>
+  </td>
+  <td width=75 style='width:56.2pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>GT&amp;GF</p>
+  </td>
+  <td width=81 style='width:60.65pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0<sup>m</sup></p>
+  </td>
+  <td width=95 style='width:71.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>24</p>
+  </td>
+  <td width=112 style='width:84.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>248</p>
+  </td>
+  <td width=349 style='width:261.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Maslov, Dueck,
+  Miller</p>
+  </td>
+  <td width=162 style='width:121.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>August, 2004</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=63 style='width:46.95pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="hwb5d3.html">here</a></p>
+  </td>
+  <td width=209 style='width:156.4pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="hwb5-24-114.tfc">here</a></p>
+  </td>
+  <td width=75 style='width:56.2pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>GT</p>
+  </td>
+  <td width=81 style='width:60.65pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0<sup>m</sup></p>
+  </td>
+  <td width=95 style='width:71.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>24</p>
+  </td>
+  <td width=112 style='width:84.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>104</p>
+  </td>
+  <td width=349 style='width:261.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Maslov, Miller,
+  Dueck</p>
+  </td>
+  <td width=162 style='width:121.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>November, 2005</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=63 style='width:46.95pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a href="hwb5ps.jpg">here</a></p>
+  </td>
+  <td width=209 style='width:156.4pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a href="hwb5ps.tfc">here</a></p>
+  </td>
+  <td width=75 style='width:56.2pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>GT&amp;GF</p>
+  </td>
+  <td width=81 style='width:60.65pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>3</p>
+  </td>
+  <td width=95 style='width:71.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>23</p>
+  </td>
+  <td width=112 style='width:84.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>127</p>
+  </td>
+  <td width=349 style='width:261.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="hwbpoly.html">I. L. Markov, D. Maslov</a></p>
+  </td>
+  <td width=162 style='width:121.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>October, 2009</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=63 style='width:46.95pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="hwb5_31_91.jpg">here</a></p>
+  </td>
+  <td width=209 style='width:156.4pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="hwb5_31_91.tfc">here</a></p>
+  </td>
+  <td width=75 style='width:56.2pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>GT</p>
+  </td>
+  <td width=81 style='width:60.65pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0<sup>m</sup></p>
+  </td>
+  <td width=95 style='width:71.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>31</p>
+  </td>
+  <td width=112 style='width:84.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>91</p>
+  </td>
+  <td width=349 style='width:261.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="http://arxiv.org/abs/1004.4320">M. Saeedi, M. S. Zamani, M. Sedighi,
+  and Z. Sasanian</a></p>
+  </td>
+  <td width=162 style='width:121.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>June, 2010</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width=63 style='width:46.95pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 21.95pt'><a
+  href="mspk_hwb5_31_91_opt_38_80.svg">here</a></p>
+  </td>
+  <td width=209 style='width:156.4pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="mspk_hwb5_31_91_opt_38_80.tfc">here</a></p>
+  </td>
+  <td width=75 style='width:56.2pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>GT</p>
+  </td>
+  <td width=81 style='width:60.65pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0<sup>m</sup></p>
+  </td>
+  <td width=95 style='width:71.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>38</p>
+  </td>
+  <td width=112 style='width:84.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>80</p>
+  </td>
+  <td width=349 style='width:261.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>Marek Szyprowski
+  and Pawel Kerntopf</p>
+  </td>
+  <td width=162 style='width:121.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>September, 2011</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes'>
+  <td width=63 style='width:46.95pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center;tab-stops:center 21.95pt'><a
+  href="hwb5-24-102.svg">here</a></p>
+  </td>
+  <td width=209 style='width:156.4pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="hwb5-24-102.tfc">here</a></p>
+  </td>
+  <td width=75 style='width:56.2pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>GT</p>
+  </td>
+  <td width=81 style='width:60.65pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>0<sup>m</sup></p>
+  </td>
+  <td width=95 style='width:71.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>24</p>
+  </td>
+  <td width=112 style='width:84.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>102</p>
+  </td>
+  <td width=349 style='width:261.6pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><a
+  href="https://link.springer.com/article/10.1007/s11128-017-1609-8">Mustapha
+  Y. Abubakar, Low Tang Jung, Nordin Zakaria, Ahmed Younes, and Abdel-Haleem
+  Abdel-Aty</a><span style='mso-bidi-font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=162 style='width:121.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal align=center style='text-align:center'>March, 2017</p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='font-size:13.5pt'>________________________________</span> <br>
+<sup><span style='font-size:13.5pt'>m</span></sup><span style='font-size:13.5pt'>
+</span>- the number is shown to be minimal <br>
+&nbsp; <br>
+&nbsp; </p>
+
+</div>
+
+</body>
+
+</html>

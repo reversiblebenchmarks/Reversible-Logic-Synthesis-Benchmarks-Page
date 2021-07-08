@@ -1,0 +1,9 @@
+AuthType Basic
+<Limit GET POST>
+order allow,deny
+allow from all
+deny from .uni-bremen.de
+deny from .nsf.gov
+deny from gdueckpro.cs.unb.ca
+ErrorDocument 403 /copy.html
+</Limit>
