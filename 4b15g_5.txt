@@ -1,0 +1,19 @@
+# (c) Copyright 2004-2011 Oleg Golubitsky and Dmitri Maslov
+# Distributing this file without an express written permission or erasing this note is prohibited.
+4
+3
+5
+11
+1
+8
+0
+9
+7
+2
+6
+14
+13
+10
+4
+12
+15
