@@ -25,17 +25,17 @@ w\:* {behavior:url(#default#VML);}
   <o:Author>Koti</o:Author>
   <o:Template>Normal</o:Template>
   <o:LastAuthor>Koti</o:LastAuthor>
-  <o:Revision>7228</o:Revision>
-  <o:TotalTime>19</o:TotalTime>
+  <o:Revision>7229</o:Revision>
+  <o:TotalTime>28</o:TotalTime>
   <o:Created>2015-08-10T21:10:00Z</o:Created>
-  <o:LastSaved>2021-07-08T20:57:00Z</o:LastSaved>
+  <o:LastSaved>2021-07-08T21:31:00Z</o:LastSaved>
   <o:Pages>1</o:Pages>
-  <o:Words>1248</o:Words>
-  <o:Characters>7116</o:Characters>
+  <o:Words>1249</o:Words>
+  <o:Characters>7122</o:Characters>
   <o:Company>&lt;arabianhorse&gt;</o:Company>
   <o:Lines>59</o:Lines>
   <o:Paragraphs>16</o:Paragraphs>
-  <o:CharactersWithSpaces>8348</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>8355</o:CharactersWithSpaces>
   <o:Version>12.00</o:Version>
  </o:DocumentProperties>
 </xml><![endif]-->
@@ -391,8 +391,8 @@ div.WordSection1
 	mso-level-number-position:left;
 	text-indent:-.25in;}
 @list l1
-	{mso-list-id:1160848512;
-	mso-list-template-ids:994229248;}
+	{mso-list-id:756941490;
+	mso-list-template-ids:1791641256;}
 @list l1:level1
 	{mso-level-number-format:bullet;
 	mso-level-text:\F0B7;
@@ -485,7 +485,7 @@ table.TableNormal
 <meta name=Author content="Dmitri Maslov">
 <meta name=KeyWords content="reversible logic, benchmarks, synthesis">
 <!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="15362"/>
+ <o:shapedefaults v:ext="edit" spidmax="16386"/>
 </xml><![endif]--><!--[if gte mso 9]><xml>
  <o:shapelayout v:ext="edit">
   <o:idmap v:ext="edit" data="1"/>
@@ -525,53 +525,53 @@ href="news.html">new circuit added (hwb5, nth_prime5).</a></p>
 
 </div>
 
-<p>This project is considered as a complementary tool for publishing the
-results of reversible logic (<a href="definitions.html">definitions</a>)
-synthesis. In the very limited space of any standard publication, only the cost
-calculation is usually shown, whereas the actual designs would be of more
-interest. Some authors use non-standard gates, others use their own metric for
-the calculation of the circuit cost, which further complicates comparison of
-the circuit designs. Here, an approach for a unified comparison of the results
-is suggested, where any author <a href="submit.html">can publish</a> their
-design and/or compare it with already posted ones. In order to unify the
-different gate libraries and cost metrics the following restrictions apply.
-First, the synthesis is done with common (in this area) restrictions: no
-fan-outs and no feedbacks. Second, the synthesis is preferred to be done in one
-of the following libraries: </p>
+<p>This project is considered to be a complementary tool for publishing research
+results in the area of reversible logic (<a href="definitions.html">definitions</a>)
+synthesis. In the limited space of any standard publication, only the gate
+count and cost calculation are usually shown, whereas the actual designs would
+be of more interest. Some authors may use non-standard <span class=GramE>gates,</span>
+other authors may use their own metric for the calculation of the circuit cost,
+which further complicates the comparison of circuits. Here, a unified <span
+class=GramE>approach</span> for comparison of the results is suggested, where
+any author <a href="submit.html">can publish</a> their circuit and/or compare
+it with the already posted ones. In order to unify the different gate libraries
+and cost metrics the following restrictions apply. First, all circuits must be
+strings of gates, i.e., no fan-out or feedback allowed. Second, the gate libraries
+are limited to: </p>
 
 <ul type=disc>
  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
      mso-list:l0 level1 lfo3;tab-stops:list .5in'><b><span style='font-size:
-     13.5pt;color:#003300'>NCT:</span> NOT, CNOT, <span class=SpellE>Toffoli</span>.
-     </b>This gate library was introduced by <span class=SpellE>Toffoli</span>
+     13.5pt;color:#003300'>NCT:</span> NOT, CNOT, <span class=SpellE>Toffoli</span>
+     gates. </b>This gate library was introduced by <span class=SpellE>Toffoli</span>
      in his 1980 paper. This library is the smallest complete set of gates.
      However, an additional garbage bit (not every reversible specification can
      be realized with zero garbage) may be required by this model.</li>
  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
      mso-list:l0 level1 lfo3;tab-stops:list .5in'><b><span style='font-size:
      13.5pt;color:#003300'>NCTSF:</span> NOT, CNOT, <span class=SpellE>Toffoli</span>,
-     SWAP, <span class=SpellE>Fredkin</span>. </b>This library adds SWAP and
-     original <span class=SpellE>Fredkin</span> gate to the previous library. <span
-     class=SpellE>Fredkin</span> gates are of interest as in some technologies
-     they have a small cost. Inclusions: NCTSF&gt;NCT.</li>
+     SWAP, <span class=SpellE>Fredkin</span> gates. </b>This library adds SWAP
+     and original <span class=SpellE>Fredkin</span> gate to the previous
+     library. <span class=SpellE>Fredkin</span> gates are of interest as in
+     some technologies they have a small cost. Inclusions: NCTSF&gt;NCT.</li>
  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
      mso-list:l0 level1 lfo3;tab-stops:list .5in'><b><span style='font-size:
-     13.5pt;color:#003300'>GT:</span> generalized (<i>n</i>-bit) <span
-     class=SpellE>Toffoli</span>. </b>This gate library is complete and does
-     not require additional garbage for any reversible specification. However,
+     13.5pt;color:#003300'>GT:</span> multiply-controlled (<i>n</i>-bit) <span
+     class=SpellE>Toffoli</span> gates. </b>This gate library is complete and
+     does not require additional garbage for any reversible specification. However,
      some of the gates in this library are expected to have a high
      technological cost. Inclusions: GT&gt;NCT.</li>
  <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
      mso-list:l0 level1 lfo3;tab-stops:list .5in'><b><span style='font-size:
-     13.5pt;color:#003300'>GT&amp;GF:</span> generalized <span class=SpellE>Toffoli</span>
-     and generalized (<i>n</i>-bit) <span class=SpellE>Fredkin</span>. </b>The
-     largest gate library. Inclusions: GT&amp;GF&gt;GT, GT&amp;GF&gt;NCTSF,
-     GT&amp;GF&gt;NCT.</li>
+     13.5pt;color:#003300'>GT&amp;GF:</span> multiply-controlled (<i>n</i>-bit)
+     <span class=SpellE>Toffoli</span> and <span class=SpellE>Fredkin</span>
+     gates. </b>The largest gate library. Inclusions: GT&amp;GF&gt;GT,
+     GT&amp;GF&gt;NCTSF, GT&amp;GF&gt;NCT.</li>
 </ul>
 
-<p class=MsoNormal>Input constants are preset to either 0 or 1 by the designer.
+<p class=MsoNormal>Input constants may take the values of either 0 or 1.
 Finally, the resulting cost is measured with three numbers: garbage, number of
-gates and <a href="definitions.html">quantum cost</a> . All results are
+gates, and <a href="definitions.html">quantum cost</a>. The results are
 published in two formats: <a href="mach-read.html">machine-readable format</a>
 and a picture with optional author comments. Everyone is welcome to <a
 href="submit.html">submit</a> their results in the machine-readable format for
@@ -880,7 +880,7 @@ href="program/RCViewer.exe">.exe</a>; <a href="readme.html">description</a></spa
 </div>
 
 <p align=center style='text-align:center'><b><span style='font-size:18.0pt'>Other
-reversible <span class=GramE>circuits</span> sources</span></b></p>
+reversible circuit sources</span></b></p>
 
 <p style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo5;
 tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
