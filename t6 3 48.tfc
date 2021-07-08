@@ -1,0 +1,30 @@
+.v i,h,g,f,e,d,c,b,a
+.i i,e,d,c,b,a
+.o a,b,c,d,e,i
+.c 0,0,0
+BEGIN
+t3 e,h,i
+t2 e,h
+t3 d,g,h
+t2 d,g
+t3 c,f,g
+t2 c,f
+t3 a,b,f
+t2 a,b
+t2 c,f
+t3 c,f,g
+t2 d,g
+t3 d,g,h
+t2 e,h
+t3 e,h,i
+t3 d,g,h
+t2 d,g
+t3 c,f,g
+t2 c,f
+t2 a,b
+t3 a,b,f
+t2 c,f
+t3 c,f,g
+t2 d,g
+t3 d,g,h
+END
