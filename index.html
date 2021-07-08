@@ -1,0 +1,660 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="index_files/filelist.xml">
+<link rel=Edit-Time-Data href="index_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Reversible Benchmarks</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Koti</o:Author>
+  <o:LastAuthor>Koti</o:LastAuthor>
+  <o:Revision>7225</o:Revision>
+  <o:TotalTime>16</o:TotalTime>
+  <o:Created>2015-08-10T21:10:00Z</o:Created>
+  <o:LastSaved>2017-05-15T14:37:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>1257</o:Words>
+  <o:Characters>7168</o:Characters>
+  <o:Company>&lt;arabianhorse&gt;</o:Company>
+  <o:Lines>59</o:Lines>
+  <o:Paragraphs>16</o:Paragraphs>
+  <o:CharactersWithSpaces>8409</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>150</w:Zoom>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-alt:"\FF2D\FF33 \660E\671D";
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;
+	mso-font-charset:128;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-536870145 1791491579 18 0 131231 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"MS Mincho";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:144514046;
+	mso-list-template-ids:1164980970;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1547446881;
+	mso-list-template-ids:4730180;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:1627809823;
+	mso-list-template-ids:1458758828;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+<meta name=Author content="Dmitri Maslov">
+<meta name=KeyWords content="reversible logic, benchmarks, synthesis">
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="12290"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body bgcolor=white background="Plata%20svetlozelenaja1.jpe" lang=EN-US
+link=blue vlink=blue style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<h1 align=center style='text-align:center'><span style='color:#000066'>Reversible
+Logic Synthesis Benchmarks Page</span></h1>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:13.5pt;color:#CC0000'>Latest news/updates:<br>
+</span></b>March, 2017: <a href="news.html">new circuit added (hwb5,
+nth_prime5).</a></p>
+
+<p class=MsoNormal align=center style='text-align:center'>January, 2017: <a
+href="permanent3x3.html">new circuit added (permanent3x3).</a></p>
+
+<p class=MsoNormal align=center style='text-align:center'>August, 2015: <a
+href="news.html">new circuits added (2of5, 6sym, 9sym, mod5, 5mod5, rd53, rd73,
+rd84, hwb7-12, nth_prime7-11, permanent).</a><b><span style='font-size:13.5pt;
+color:#CC0000'><o:p></o:p></span></b></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p>This project is considered as a complementary tool for publishing the
+results of reversible logic (<a href="definitions.html">definitions</a>)
+synthesis. In the very limited space of any standard publication, only the cost
+calculation is usually shown, whereas the actual designs would be of more
+interest. Some authors use non-standard gates, others use their own metric for
+the calculation of the circuit cost, which further complicates comparison of
+the circuit designs. Here, an approach for a unified comparison of the results
+is suggested, where any author <a href="submit.html">can publish</a> their
+design and/or compare it with already posted ones. In order to unify the
+different gate libraries and cost metrics the following restrictions apply.
+First, the synthesis is done with common (in this area) restrictions: no
+fan-outs and no feedbacks. Second, the synthesis is preferred to be done in one
+of the following libraries: </p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in'><b><span style='font-size:
+     13.5pt;color:#003300'>NCT:</span> NOT, CNOT, Toffoli. </b>This gate
+     library was introduced by Toffoli in his 1980 paper. This library is the
+     smallest complete set of gates. However, an additional garbage bit (not
+     every reversible specification can be realized with zero garbage) may be
+     required by this model.</li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in'><b><span style='font-size:
+     13.5pt;color:#003300'>NCTSF:</span> NOT, CNOT, Toffoli, SWAP, Fredkin. </b>This
+     library adds SWAP and original Fredkin gate to the previous library.
+     Fredkin gates are of interest as in some technologies they have a small
+     cost. Inclusions: NCTSF&gt;NCT.</li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in'><b><span style='font-size:
+     13.5pt;color:#003300'>GT:</span> generalized (<i>n</i>-bit) Toffoli. </b>This
+     gate library is complete and does not require additional garbage for any
+     reversible specification. However, some of the gates in this library are
+     expected to have a high technological cost. Inclusions: GT&gt;NCT.</li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo3;tab-stops:list .5in'><b><span style='font-size:
+     13.5pt;color:#003300'>GT&amp;GF:</span> generalized Toffoli and
+     generalized (<i>n</i>-bit) Fredkin. </b>The largest gate library.
+     Inclusions: GT&amp;GF&gt;GT, GT&amp;GF&gt;NCTSF, GT&amp;GF&gt;NCT.</li>
+</ul>
+
+<p class=MsoNormal>Input constants are preset to either 0 or 1 by the designer.
+Finally, the resulting cost is measured with three numbers: garbage, number of
+gates and <a href="definitions.html">quantum cost</a> . All results are
+published in two formats: <a href="mach-read.html">machine-readable format</a>
+and a picture with optional author comments. Everyone is welcome to <a
+href="submit.html">submit</a> their results in the machine-readable format for
+the immediate publication on this website as long as no better design is
+already published. </p>
+
+<p>Circuits for the following benchmark functions are currently available: <o:p></o:p></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none;mso-border-alt:outset #111111 .75pt;
+ mso-padding-alt:0in 5.4pt 0in 5.4pt' id=AutoNumber1>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;mso-border-alt:
+  inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b>Family/type</b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border:inset #111111 1.0pt;border-left:
+  none;mso-border-left-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b>Individual functions and circuits</b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="4bmgc.html">4-bit with maximal gate count:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="4b15g_1.html">4b15g_1</a> , <a
+  href="4b15g_2.html">4b15g_2</a> , <a href="4b15g_3.html">4b15g_3</a> , <a
+  href="4b15g_4.html">4b15g_4</a> , <a href="4b15g_5.html">4b15g_5</a></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="adders.html">Adders:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="rd32.html">1bitadder (rd32)</a> , <a
+  href="5bitadder.html">5bitadder</a> , <a href="8bitadder.html">8bitadder</a></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="mods.html">Divisibility checkers:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="mod5.html">4mod5</a> , <a href="5mod5.html">5mod5</a></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="cycles.html">Cycle functions:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="cycle10_2.html">cycle10_2</a> , <a
+  href="cycle17_3.html">cycle17_3</a></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="gfp%5emmults.html">Galois field multipliers:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="gf2%5e3mult.html">gf2^3mult</a> , <a
+  href="gf2%5e4mult.html">gf2^4mult</a> , <a href="gf2%5e5mult.html">gf2^5mult</a>
+  , <a href="gf2%5e6mult.html">gf2^6mult</a> , <a href="gf2%5e7mult.html">gf2^7mult</a>
+  , <a href="gf2%5e8mult.html">gf2^8mult</a> , <a href="gf2%5e9mult.html">gf2^9mult</a>
+  , <a href="gf2%5e10mult.html">gf2^10mult</a> , <a href="gf2%5e11mult.html">gf2^11mult</a>
+  , <a href="gf2%5e12mult.html">gf2^12mult</a> , <a href="gf2%5e13mult.html">gf2^13mult</a>
+  , <a href="gf2%5e14mult.html">gf2^14mult</a> , <a href="gf2%5e15mult.html">gf2^15mult</a>
+  , <a href="gf2%5e16mult.html">gf2^16mult</a> , <a href="gf2%5e17mult.html">gf2^17mult</a>
+  , <a href="gf2%5e18mult.html">gf2^18mult</a> , <a href="gf2%5e19mult.html">gf2^19mult</a>
+  , <a href="gf2%5e20mult.html">gf2^20mult</a> , <a href="gf2%5e32mult.html">gf2^32mult</a>
+  , <a href="gf2%5e50mult.html">gf2^50mult</a> , <a href="gf2%5e64mult.html">gf2^64mult</a>
+  , <a href="gf2%5e100mult.html">gf2^100mult</a> , <a href="gf2%5e127mult.html">gf2^127mult</a>
+  , <a href="gf2%5e128mult.html">gf2^128mult</a> , <a href="gf2%5e256mult.html">gf2^256mult</a>
+  , <a href="gf2%5e512mult.html">gf2^512mult</a></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="graycodes.html">Gray code functions</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="hams.html">Hamming coding functions:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="ham3.html">ham3</a> , <a href="ham7.html">ham7</a>
+  , <a href="ham15.html">ham15</a> </b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="hwbs.html">Hidden weighted bit functions:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="hwb4.html">hwb4</a> , <a href="hwb5.html">hwb5</a>
+  , <a href="hwb6.html">hwb6</a> , <a href="hwb7.html">hwb7</a> , <a
+  href="hwb8.html">hwb8</a> , <a href="hwb9.html">hwb9</a> , <a
+  href="hwb10.html">hwb10</a> , <a href="hwb11.html">hwb11</a> , <a
+  href="hwb12.html">hwb12</a> , <a href="hwb13.html">hwb13</a> , <a
+  href="hwb14.html">hwb14</a> , <a href="hwb15.html">hwb15</a> , <a
+  href="hwb16.html">hwb16</a> , <a href="hwb20.html">hwb20</a> , <a
+  href="hwb50.html">hwb50</a> , <a href="hwb100.html">hwb100</a> , <a
+  href="hwb200.html">hwb200</a> , <a href="hwb500.html">hwb500</a> , <a
+  href="hwb1000.html">hwb1000</a></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b>MMD worst case:</b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="3_17.html">3_17</a> , <a href="4_49.html">4_49</a>
+  </b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a href="modadders.html"><b>Modula adders:</b></a></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a href="mod5adder.html"><b>mod5adder</b></a> <b>,</b> <a
+  href="mod1024adder.html"><b>mod1024adder</b></a><b> , <a
+  href="mod1048576adder.html">mod1048576adder</a></b><a href="mod1024adder.html"><b>
+  </b></a></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="nthprime.html">N-th prime:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="nth_prime3_inc.html">nth_prime3_inc</a> , <a
+  href="nth_prime4_inc.html">nth_prime4_inc</a> , <a href="nth_prime5_inc.html">nth_prime5_inc</a>
+  , <a href="nth_prime6_inc.html">nth_prime6_inc</a> , <a
+  href="nth_prime7_inc.html">nth_prime7_inc</a> , <a href="nth_prime8_inc.html">nth_prime8_inc</a>
+  , <a href="nth_prime9_inc.html">nth_prime9_inc</a> , <a
+  href="nth_prime10_inc.html">nth_prime10_inc</a> , <a
+  href="nth_prime11_inc.html">nth_prime11_inc</a> , <a
+  href="nth_prime12_inc.html">nth_prime12_inc</a> , <a
+  href="nth_prime13_inc.html">nth_prime13_inc</a> , <a
+  href="nth_prime14_inc.html">nth_prime14_inc</a> , <a
+  href="nth_prime15_inc.html">nth_prime15_inc</a> , <a
+  href="nth_prime16_inc.html">nth_prime16_inc</a> , <a
+  href="nth_prime17_inc.html">nth_prime17_inc</a></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="permanent.html">Permanent:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="permanent1x1.html"><span lang=NL
+  style='mso-ansi-language:NL'>permanent1x1</span></a></b><b><span lang=NL
+  style='mso-ansi-language:NL'> , </span><a href="permanent2x2.html"><span
+  lang=NL style='mso-ansi-language:NL'>permanent 2x2</span></a></b><b><span
+  lang=NL style='mso-ansi-language:NL'> , </span><a href="permanent3x3.html"><span
+  lang=NL style='mso-ansi-language:NL'>permanent3x3</span></a></b><b><span
+  lang=NL style='mso-ansi-language:NL'> , </span><a href="permanent4x4.html"><span
+  lang=NL style='mso-ansi-language:NL'>permanent 4x4</span></a></b><span
+  lang=NL style='mso-ansi-language:NL'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="rds.html">RD - input weight functions:</a></b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="rd53.html">rd53</a> , <a href="rd73.html">rd73</a>
+  , <a href="rd84.html">rd84</a> </b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b>Symmetric functions:</b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b><a href="6sym.html">6sym</a> , <a href="9sym.html">9sym</a></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;mso-yfti-lastrow:yes'>
+  <td width="18%" style='width:18.0%;border:inset #111111 1.0pt;border-top:
+  none;mso-border-top-alt:inset #111111 .75pt;mso-border-alt:inset #111111 .75pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><b>Other:</b></p>
+  </td>
+  <td width="82%" style='width:82.0%;border-top:none;border-left:none;
+  border-bottom:inset #111111 1.0pt;border-right:inset #111111 1.0pt;
+  mso-border-top-alt:inset #111111 .75pt;mso-border-left-alt:inset #111111 .75pt;
+  mso-border-alt:inset #111111 .75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><a href="2-4dec.html"><b>2-4dec</b></a><b> , <a
+  href="2of5.html">2of5</a> , <a href="xor5.html">xor5</a>&nbsp; </b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:18.0pt;color:#990000'>QCViewer (targeted specifically for
+quantum circuits): <a href="https://github.com/aparent/QCViewer">description
+and source</a>&nbsp;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:18.0pt;color:#990000'>RCViewer+: Improved Reversible Circuit
+Viewer/Analyzer Software: <a href="http://ceit.aut.ac.ir/QDA/RCV.htm">description
+and executable</a>&nbsp;</span></b></p>
+
+<p align=center style='text-align:center'><b><span style='font-size:18.0pt;
+color:#990000'>RCViewer: Reversible Circuit Viewer/Analyzer Software: <a
+href="program/RCViewer.zip">.zip</a>, <a href="program/RCViewer.exe">.exe</a>; <a
+href="readme.html">description</a></span></b></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p align=center style='text-align:center'><b><span style='font-size:18.0pt'>Other
+reversible circuits sources</span></b></p>
+
+<p style='margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo5;
+tab-stops:list .5in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><a
+href="http://aqua.sfc.wide.ad.jp/research/arithmetic/arithmetic.html">Rod Van
+Meter's Reversible/Quantum Arithmetic page</a></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:13.5pt'>Content of this web page has been copied in year 2009.
+<a href="copy.html">Read more...</a></span></b></p>
+
+<div class=MsoNormal align=center style='text-align:center'>
+
+<hr size=2 width="100%" align=center>
+
+</div>
+
+<p align=right style='text-align:right'><span style='font-size:10.0pt'>Developed
+and maintained by</span> <br>
+<span style='font-size:10.0pt'><a href="mailto:dmitri.maslov@gmail.com">Dmitri
+Maslov</a><br>
+Last updated: May 15, 2017</span></p>
+
+</div>
+
+</body>
+
+</html>

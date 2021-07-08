@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Dmitri Maslov">
+  <meta name="GENERATOR"
+ content="Microsoft FrontPage 5.0">
+  <meta name="KeyWords"
+ content="reversible logic, benchmarks, synthesis">
+  <title>Reversible Benchmarks</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<center>
+<h1> <b><font color="#000066">Reversible Logic Synthesis Benchmarks
+Page</font></b></h1>
+</center>
+<hr width="100%">
+<center><b><font color="#000000"><font size="-1">you are in...</font> </font><font
+ color="#330000"><font size="+2"> Main\divisibility checkers<br>
+</font></font></b></center>
+<p>Function <span style="font-style: italic;">NmodK</span> has <span
+ style="font-style: italic;">N</span> inputs and a single output. Its
+output is one iff the binary number represented by the function input
+is divisible by the integer <span style="font-style: italic;">K</span>.
+When the resulting function implementation passes the inputs through
+unchanged, <span style="font-style: italic;">NmodK</span> function is
+a case of so-called Grover's oracle.</p>
+<p>Every single output Boolean function can be extended to a minimal
+reversible specification by the following procedure. Take the truth
+table representation of this function illustrated below.<br>
+</p>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 250px; height: 90px;">
+  <tbody>
+    <tr>
+      <td style="width: 75%; vertical-align: middle;">
+      <div style="text-align: center;">input<br>
+      </div>
+      </td>
+      <td dir="rtl" style="text-align: center; vertical-align: middle;">output</td>
+    </tr>
+  </tbody>
+</table>
+<p>Then, the truth table of its reversible specification is:<br>
+</p>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; height: 180px; width: 500px;">
+  <tbody>
+    <tr>
+      <td
+ style="text-align: center; vertical-align: middle; width: 13%;">0<br>
+0<br>
+...<br>
+0<br>
+      </td>
+      <td
+ style="text-align: center; vertical-align: middle; width: 37%;">input<br>
+      </td>
+      <td
+ style="text-align: center; vertical-align: middle; width: 13%;">output<br>
+      </td>
+      <td style="text-align: center; vertical-align: middle;">input<br>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="text-align: center; vertical-align: middle; width: 13%;">1<br>
+1<br>
+...<br>
+1<br>
+      </td>
+      <td
+ style="text-align: center; vertical-align: middle; width: 37%;">input<br>
+      </td>
+      <td
+ style="text-align: center; vertical-align: middle; width: 13%;">comple-
+mented output<br>
+      </td>
+      <td style="text-align: center; vertical-align: middle;">input<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

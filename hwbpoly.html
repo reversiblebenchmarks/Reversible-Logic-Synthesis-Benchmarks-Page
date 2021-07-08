@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Dmitri Maslov">
+  <meta name="GENERATOR"
+ content="Microsoft FrontPage 5.0">
+  <meta name="KeyWords"
+ content="reversible logic, benchmarks, synthesis">
+  <title>Reversible Benchmarks</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<center>
+<h1><b><font color="#000066">Reversible Logic Synthesis Benchmarks Page</font></b></h1>
+</center>
+<hr width="100%">
+<center><b><font color="#000000"><font size="-1">you are in...</font> </font><font
+ color="#330000"><font size="+2">Main\polynomial size circuits for <i>hwb</i></font></font></b></center>
+<p>Whereas known circuits for <i>hwb</i> functions with no auxiliary bits exhibit exponential growth in size as 
+the number of inputs increases, there is no evidence that this is not only 
+because current heuristics fail to exploit the structure of <i>hwb</i> functions. However, as first 
+noted by <a href="http://www.eecs.umich.edu/~imarkov/">I. Markov</a> and
+<a href="http://www.iqc.ca/~dmaslov/">D. Maslov</a>, a polynomial size 
+reversible circuit with logarithmic number of ancillary bits may be 
+constructed. In this straightforward approach, <i>s</i>=[log(<i>n</i>)]+1 auxiliary bits set to value zero need to be 
+prepared. Then, for every input bit one applies 
+circuit <i>cycle1_s</i> to this input value and <i>s </i>auxiliary bits. By the end of this 
+computation, auxiliary bits contain input weight. Next, apply Fredkin gates to 
+swap inputs of <i>hwb</i>. This results in the circuit, such as one illustrated below 
+for <i>hwb7</i> function with 7 inputs x1, x2, x3, x4, x5, x6, and x7. Input 
+weight is accumulated on the 3=[log(7)]+1 auxiliary bits at the bottom of the 
+circuit.
+</p>
+<p><img border="0" src="hwb7dpoly.JPG" width="918" height="245"></p>
+This circuit may be simplified to the following when one notices that it 
+suffices to apply <i>cycle1_k</i> to the first 2<sup>k</sup>-1 input bits 
+(counting bits starting with one) of the <i>hwb</i> function to properly calculate the 
+input weight:<p><img border="0" src="hwb7ps.JPG" width="838" height="245"></p>
+<p>The circuit in the example above contains 35 gates and has the quantum cost of 
+203. 
+It 
+computes <i>hwb7</i>. </p>
+<p>In general, circuits constructed by this approach require O(<i>n</i> log<sup>2</sup>(<i>n</i>)) 
+gates.
+<br>
+</p>
+</body>
+</html>

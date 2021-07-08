@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Dmitri Maslov">
+  <meta name="GENERATOR"
+ content="Microsoft FrontPage 5.0">
+  <meta name="KeyWords"
+ content="reversible logic, benchmarks, synthesis">
+  <title>Reversible Benchmarks</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<center>
+<h1><b><font color="#000066">Reversible Logic Synthesis Benchmarks Page</font></b></h1>
+</center>
+<hr width="100%">
+<center><b><font color="#000000"><font size="-1">you are in...</font> </font><font
+ color="#330000"><font size="+2">Main\Machine-Readable
+Format Description</font></font></b></center>
+<p>&nbsp;&nbsp;&nbsp; The <b>machine-readable format</b> is a .tfc
+file
+which consists of the following strings.
+</p>
+<ul>
+  <li>
+1<sup>st</sup> string is the list of all variables (lines)
+participating
+in the calculation; all entities are deliminated by commas. This string
+starts with the keyword ".v ".</li>
+  <li>
+2<sup>nd</sup> string is the ordered list of all input variables
+(lines)
+for the function to be calculated with the entities deliminated by
+commas.
+The beginning of this list is labeled with ".i ".</li>
+  <li>
+3<sup>rd</sup> string is the list of output lines separated by commas;
+it starts with the control sequence ".o ". Optional string starting
+with
+quantifier ".ol" defines the labels for the outputs in the order they
+appear
+in the output list. If output labels are not specified, the program
+will
+assign the input labels to the corresponding output.</li>
+  <li>
+4<sup>th</sup> string contains values for the input constants in the
+order
+they appear on the first string without any spaces. If no input
+constants
+are needed, this string is not present. This string starts with ".c ".</li>
+  <li>
+5<sup>th</sup> string, and every non-empty string thereafter, contain
+either:
+a) the word "BEGIN" indicating the beginning of a network, b) exactly
+one
+gate written in the form described below c) the word "END" indicating
+the
+end of the circuit. The file should list the gates in the order they
+appear
+in the actual design.</li>
+  <li>
+The circuit file may also include comments, indicated by a "#" symbol
+in
+the beginning of a string.</li>
+</ul>
+<i>&nbsp;&nbsp;&nbsp; </i><b>Gate types.</b>
+<ul>
+  <li>
+    <b>Toffoli gates </b>are written as "tn ", where "t" indicates
+Toffoli
+and "n" is the size of the Toffoli gate (number of variables in it)
+followed
+by the list of variables, such that the EXORed variable (target of the
+gate) is at the end of the list.</li>
+  <li>
+    <b>Fredkin gates</b> are written as "fn ", where "f" indicates
+Fredkin
+and "n" is the size of the corresponding Fredkin gate followed by the
+list
+of variables, such that the SWAPed variables (targets of the gate) are
+at the end of the list.</li>
+</ul>
+<i>Examples.</i>
+<li>NOT gate is a TOF(&Oslash;;a) gate which in machine-readable format
+should
+be written as "<font face="Arial,Helvetica">t1 a</font>".</li>
+<li>
+CNOT gate is a TOF(a;b) gate which in machine-readable format should be
+written as "<font face="Arial,Helvetica">t2 a,b</font>".</li>
+<li>
+Original Toffoli gate is a TOF(a,b;c) gate which in machine-readable
+format
+should be written as "<font face="Arial,Helvetica">t3 a,b,c</font>".</li>
+<li>
+SWAP gate is a FRE(&Oslash;;a,b) gate which in machine-readable format
+looks as "f<font face="Arial,Helvetica">2 a,b</font>".</li>
+<li>
+Original Fredkin gate is a FRE(a;b,c) which in machine-readable format
+looks as "f3<font face="Arial,Helvetica"> a,b,c</font>".</li>
+<p><br>
+<i>Example. A</i> reversible circuit file for 3-bit adder is as
+<a href="rd32.tfc">follows</a>.
+</p>
+</body>
+</html>

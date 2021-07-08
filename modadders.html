@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Dmitri Maslov">
+  <meta name="GENERATOR"
+ content="Microsoft FrontPage 5.0">
+  <meta name="KeyWords"
+ content="reversible logic, benchmarks, synthesis">
+  <title>Reversible Benchmarks</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<center>
+<h1> <b><font color="#000066">Reversible Logic Synthesis Benchmarks
+Page</font></b></h1>
+</center>
+<hr width="100%">
+<center><b><font color="#000000"><font size="-1">you are in...</font> </font><font
+ color="#330000"><font size="+2">
+Main\modulo adders<br>
+</font></font></b></center>
+<p>Function <span style="font-style: italic;">modNadder</span> has <span
+ style="font-style: italic;">2*]log N[</span> inputs and <span
+ style="font-style: italic;">2*]log N[</span> outputs. Its input is a
+set of two
+modulo-<span style="font-style: italic;">N</span> numbers <span
+ style="font-style: italic;">A</span> and <span
+ style="font-style: italic;">B</span> written in binary. Its output is
+the pair of modulo-<span style="font-style: italic;">N</span>
+numbers <span style="font-style: italic;">(A, A+B mod N)</span>. Among
+such modulo adders only those with parameter N being a power of<font face="Times New Roman"> 2 are
+specified reversibly. Others are incompletely specified functions.
+However, a reversible specification for such (N is not a power of 2)
+functions can be trivially constructed without adding any garbage bits.
+For instance, any pair (X, Y) where binary number X</font><span
+ style="font-family: Times New Roman;">&gt;=N or Y&gt;=N can be mapped into
+itself.</span><font face="Times New Roman"> </font>
+</p>
+<p><font face="Times New Roman">In
+digital design, modulo adders are very useful functions and it is
+important to have small circuits for them. </font> <br>
+</p>
+<p><span style="font-style: italic;">Mod2<sup>T</sup></span><sup></sup><span
+ style="font-style: italic;">adder</span>
+benchmark function is also a <span style="font-style: italic;">cycleT_T</span>&nbsp;
+benchmark function for any natural number <span
+ style="font-style: italic;">T</span>.<br>
+</p>
+</body>
+</html>
