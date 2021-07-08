@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Microsoft FrontPage 5.0">
+  <title>RCViewer - A reversible circuit viewing application</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<center>
+<h1> <b><font color="#000066">Reversible Logic Synthesis Benchmarks
+Page</font></b></h1>
+</center>
+<center>
+<hr width="100%"><b><font color="#000000"><font size="-1">you are in...</font></font><font
+ color="#330000"><font size="+2">
+Main\RCViewer Description</font></font></b></center>
+<h1> RCViewer</h1>
+<h2> A simple application to view reversible circuits</h2>
+<h2> </h2>
+<h2> Version 1.14</h2>
+RCViewer is intended to be a simple application to aid in the
+visualization of reversible quantum circuits made up of Toffoli and
+Fredkin gates in cascade
+format. Currently it will display a simple image for a given circuit,
+and
+for now can save this image as a bitmap file. More gate support and
+more
+image format support is planned for the future.
+<p>RCViewer was written in C++ using the Windows Template Library, and
+so
+is currently available only for the Win32 platform. </p>
+<p>RCViewer is free to distribute, although if you choose to distribute
+it
+over a web page, or some other large-scale form of distribution, I
+would appreciate
+it if you dropped me a note at <a href="mailto:y8ju8@unb.ca"
+ target="_blank">
+y8ju8@unb.ca</a> to let me know. Neither myself nor UNB will accept any
+responsibility for any harm caused by this program or the transfer
+thereof. <br>
+</p>
+<hr>
+<h2> Features:</h2>
+<b>Circuit types:</b>
+<ul>
+  <li> Currently limited to cascades of generalized Toffoli and Fredkin
+gates.</li>
+  <li> Custom file format (.tfc). Syntax is provided with the sample
+.tfc
+files.</li>
+</ul>
+<b>Image exporting:</b>
+<ul>
+  <li> Currently can save the circuit image as a 24-bit Bitmap file.</li>
+</ul>
+<b>Quantum Cost:</b>
+<ul>
+  <li> Calculates the quantum cost of the circuit based on the latest <a
+ href="definitions.html" target="_blank">
+table</a>
+.</li>
+</ul>
+<b>Output verification:</b>
+<ul>
+  <li> View the output of a circuit in truth-table form</li>
+  <li> Verify the output of a circuit against a PLA file</li>
+</ul>
+<b>Customization:</b>
+<ul>
+  <li> Can change the appearance of the circuit by altering the colors,
+size, and spacing of gates.</li>
+</ul>
+<hr>
+<h2> Instructions</h2>
+Everything is pretty simple and straightforward.
+<p>To open a circuit for viewing, click the folder icon on the toolbar
+(folder
+image), or select File/Open... from the menu bar, or use the shortcut:
+Ctrl-O.
+By default, files with the extension of .tfc ("Toffoli-Fredkin
+Cascades")
+are listed, but any file extension is valid and will be attempted to be
+parsed.
+Error messages will alert you to any parse errors. </p>
+<p>To save a bitmap image of an open circuit, click the disk image icon
+on
+the toolbar, or select File/Save BMP... from the menu bar, or use the
+shortcut:
+Ctrl-S. The image will be saved as a 24-bit bitmap file. If no circuit
+has
+been opened, or if the circuit is empty (0 gates), this button does
+nothing. </p>
+<p>To change the look of the circuit, select Edit/Preferences... from
+the menu bar, or use the shortcut: Ctrl-E. Here you can change the: </p>
+<ul>
+  <li> Colors. Separate colors can be chosen to draw: variable names,
+constant values, garbage output, the lines themselves, gates, and the
+background color.
+Now you can show off your circuits in stylish hot-pink on yellow
+background,
+should you so desire!</li>
+  <li> Sizes and spaces. Change the size of: target symbols, control
+symbols. Change the space: between lines (vertical), and between gates
+(horizontal).</li>
+  <li> Ordering. Have the variables drawn from top-to-bottom (in the
+order
+specified in the tfc file) or from bottom-to-top.</li>
+</ul>
+To view the I/O of a circuit, click on the "IO" button on the toolbar,
+or
+select View/Input/Output from the menu bar, or use the shortcut:
+Ctrl-I. Input
+values are listed ignoring the constant input lines, and output values
+are
+listed ignoring the garbage output variables.
+<p>To compare the output of a circuit to a PLA file, click the "PLA"
+button on the toolbar, or select File/Verify With PLA... from the menu
+bar. The program
+will try and match output variables from the currently opened circuit
+to
+the output lines from the chosen PLA file. If successful, the program
+will
+report which Circuit output lines map to which PLA output lines.
+Otherwise, the program will report that the circuit and PLA files do
+not have equivalent output. </p>
+<p>To view the cost statistics of an open circuit, click the "Q" icon
+on the
+toolbar, or select View/Quantum Cost, or use the shortcut: Ctrl-Q. A
+message
+box will appear, telling you: the gate count of the circuit, the number
+of
+garbage bits, and the estimated quantum cost taken from the latest
+tables. </p>
+<p>The circuit image will wrap if it is longer than the window's width
+(as
+well as a bit of bordering space.) However, if the window is too small
+(narrower
+than 200 pixels, technically,) the circuit will not be drawn at all.
+Saved
+bitmap files will appear exactly as they do in the window (only without
+any
+excess whitespace), so be sure to play with the window size and the
+preferences
+to produce the image you want. <br>
+</p>
+<hr>
+<h2> Future plans:</h2>
+<ul>
+  <li> Provide more image format options for saving</li>
+  <li> Clean up some of the code structure, open it up to allow for
+easy
+addition of gate types</li>
+</ul>
+<hr>
+<h2> Version History</h2>
+<ul>
+  <li> 1.0 - First version. Supports Toffoli and Fredkin gates only.
+Supports bitmap files for image saving. Can customize color and spacing
+of gates and
+lines.</li>
+  <li> 1.01 - Added ParseException for including a .c list in the file
+when
+there are no constants expected. Added option to list variables from
+either
+top-to-bottom or bottom-to-top.</li>
+  <li> 1.02 - Fixed silly bug when drawing Fredkin gates from bottom to
+top.</li>
+  <li> 1.1 - Added Input/Output viewing and PLA file verification
+features.</li>
+  <li> 1.11 - Improved PLA parsing. Sped up scrolling through IO for
+larger
+circuits. Tweaked default preferences.</li>
+  <li> 1.12 - Reverted I/O viewing to text. Fixed some scrolling bugs.</li>
+  <li> 1.13 - Optional Output variable tags added.</li>
+  <li>1.132 - The quantum cost table was updated based on the <a
+ href="papers/0403053.pdf">new results</a>.</li>
+  <li>1.14 - The quantum cost table was updated based on the <a
+ href="papers/09G_3_586.pdf">newer results</a>.</li>
+</ul>
+<hr>
+<p>Last updated: <i>January 7, 2005</i> <br>
+Author: Nathan Scott <br>
+Comments\Bugs? Email: <a href="mailto:y8ju8@unb.c" target="_blank">y8ju8@unb.ca</a>
+</p>
+</body>
+</html>

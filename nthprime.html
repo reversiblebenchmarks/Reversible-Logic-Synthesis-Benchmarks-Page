@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Dmitri Maslov">
+  <meta name="GENERATOR"
+ content="Microsoft FrontPage 5.0">
+  <meta name="KeyWords"
+ content="reversible logic, benchmarks, synthesis">
+  <title>Reversible Benchmarks</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<center>
+<h1><b><font color="#000066">Reversible Logic Synthesis Benchmarks Page</font></b></h1>
+</center>
+<hr width="100%">
+<center><b><font color="#000000"><font size="-1">you are in...</font> </font><font
+ color="#330000"><font size="+2">Main\</font></font></b><font size="+2" color="#330000"><b>n-th 
+prime</b></font></center>
+<p>Function <span style="font-style: italic">nth_primeK</span> has <i>K</i>
+inputs and <i>K</i> outputs. For an input value <i>n</i> this function returns <i>n</i>-th 
+prime, as long as this prime may be written (in binary) using at most <i>K</i> bits. 
+Enumeration of primes starts with one, in that zeroth prime,
+<span style="font-style: italic">nth_primeK(0)</span>, may be anything that is 
+not equal to a prime, e.g., zero. For sufficiently large <i>K</i>, <i>nth_primeK</i>(1)=2,
+<i>nth_primeK</i>(2)=3, <i>nth_primeK</i>(3)=5, <i>nth_primeK</i>(4)=7, <i>
+nth_primeK</i>(5)=11, etc.</p>
+<p>As described, <span style="font-style: italic">nth_primeK</span>, is an 
+incomplete specification, as some inputs do not have a valid output. There are 
+many ways, (2<sup>K</sup>-(#PrimesLessThan(2<sup>K</sup>)))! in particular, to extend <i>
+nth_primeK</i> to a reversible specification, even without adding any new input 
+bits. One of them is to fill the unassigned outputs with an increasing sequence 
+of zero, one and composite numbers between 4 and 2<sup>K</sup>-1. This results in the 
+reversible specification <span style="font-style: italic">nth_primeK_inc</span>.
+</p>
+<p>Why is this function and any of its reversible extensions interesting? 
+Classically, the best known algorithm to compute
+<span style="font-style: italic">nth_primeI</span> has an exponential complexity 
+(about sqrt(2)<sup>K</sup> due to reducibility, via binary search, to the 
+problem of computing the number of primes <i>p&lt;=x</i>, whose
+<a href="http://scholar.google.com/scholar?hl=en&q=JC+Lagarias,+AM+Odlyzko+Computing+pi(x):+An+Analytic+Method&btnG=Search&as_sdt=2001&as_ylo=&as_vis=0">
+best known solution</a> requires O(x<sup>1/2+e</sup>) time for any e&gt;0) in the 
+number of input bits, <i>K</i>. Thus, any reversible circuit for any reversible 
+specification completing <span style="font-style: italic">nth_primeK </span>is 
+expected to contain an exponential number of gates. Should a polynomial size 
+reversible circuit using a polynomial number of ancilla bits be found, it will 
+be a major breakthrough.&nbsp; </p>
+<p>Currently, <span style="font-style: italic">nth_primeK</span> and any of its 
+reversible extensions form a family of  most difficult functions in terms of 
+their <i>practical </i>(as opposed to <a href="permanent.html">theoretical</a>) circuit complexity. Indeed, all other functions 
+currently available on this web page (excluding <i>permanent</i>) 
+allow a polynomial size circuit if a small (at most linear, if at all) number of auxiliary bits is available (see 
+<a href="hwbpoly.html">here</a> for 
+the discussion of efficient circuits for <i>hwb</i>).
+</p>
+<p>&nbsp;</p>
+<br>
+</body>
+</html>

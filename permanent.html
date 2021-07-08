@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Dmitri Maslov">
+  <meta name="GENERATOR"
+ content="Microsoft FrontPage 5.0">
+  <meta name="KeyWords"
+ content="reversible logic, benchmarks, synthesis">
+  <title>Reversible Benchmarks</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<center>
+<h1><b><font color="#000066">Reversible Logic Synthesis Benchmarks Page</font></b></h1>
+</center>
+<hr width="100%">
+<center><b><font color="#000000"><font size="-1">you are in...</font> </font><font
+ color="#330000"><font size="+2">Main\permanent</font></font></b></center>
+<p>Function <span style="font-style: italic">permanent(NxN)</span> has <i>N<sup>2</sup></i>
+inputs and <i>]log(N!)[</i> outputs. It computes
+<a href="http://en.wikipedia.org/wiki/Permanent">permanent</a> of a 0-1 matrix. 
+L. Valiant showed that such
+<a href="http://en.wikipedia.org/wiki/Permanent_is_sharp-P-complete">permanent 
+is #P-Complete</a>. Thus, this function is among those we believe are the most 
+complex---there is strong evidence that no polynomial time classical algorithm 
+exists to compute permanent. </p>
+<p>Function <span style="font-style: italic">permanent(NxN)</span> may be 
+embedded into a reversible specification in many ways. A trivial approach that 
+does not guarantee minimal garbage is to introduce <i>]log(N!)[</i> input 
+constants and EXOR output value with those bits. This results in a reversible 
+specification with <i>N<sup>2</sup></i>+<i>]log(N!)[ </i>inputs/outputs,
+<span style="font-style: italic">permanentNxN.</span></p>
+<p>A number of single output Boolean functions may be generated each of which is 
+polynomially reducible to computing <span style="font-style: italic">
+permanent(NxN).</span> Each of such functions is as hard (up to a small 
+polynomial factor) as computing the permanent itself. For example, an <i>N<sup>2</sup></i>+<i>]log(N!)[</i>-input 
+single output function may be defined to return zero if permanent of the 0-1 
+matrix coded on the first <i>N<sup>2</sup></i> bits is less than or equal to the 
+number coded by the remaining <i>]log(N!)[</i> inputs; otherwise, return one. A 
+Boolean function may have <i>N<sup>2</sup></i>+<i>]loglog(N!)[</i> inputs and 
+one output, and return k-th bit of the permanent, where matrix is coded in the 
+first <i>N<sup>2</sup></i> inputs, and the remaining <i>]loglog(N!)[</i> bits 
+are used to code value of the bit being extracted. It is likely that <i>P<sup>2</sup> 
+mod&nbsp; 3</i> where P is permanent of an NxN 0-1 matrix (it is easy to see 
+that the relevant number is always zero or one, i.e., it takes a Boolean value), 
+a function with <i>N<sup>2</sup></i> inputs and one output, is as hard as 
+computing the permanent itself (<a href="http://portal.acm.org/citation.cfm?id=804419&dl=GUIDE,"><i>P 
+mod&nbsp; 3 </i>is #P complete</a>).</p>
+<p>Thanks to <a href="http://www.nec-labs.com/~dmitry/">Dima Gavinsky</a> for 
+relevant discussions and suggestions. </p>
+</body>
+</html>
