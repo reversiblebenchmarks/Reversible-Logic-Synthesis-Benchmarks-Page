@@ -1,0 +1,10 @@
+.v a,b,c,d,e,f
+.i a,b,c,d,e,f
+.o a,b,c,d,e,f
+BEGIN
+t2 b,a
+t2 c,b
+t2 d,c
+t2 e,d
+t2 f,e
+END

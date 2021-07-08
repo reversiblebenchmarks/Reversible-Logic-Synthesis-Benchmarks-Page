@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Dmitri Maslov">
+  <meta name="GENERATOR"
+ content="Mozilla/4.75 [en] (WinNT; U) [Netscape]">
+  <meta name="KeyWords"
+ content="reversible logic, benchmarks, synthesis">
+  <title>Reversible Benchmarks</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<center>
+<h1> <b><font color="#000066">Reversible Logic Synthesis Benchmarks
+Page</font></b></h1>
+</center>
+<hr width="100%">
+<center><b><font color="#000000"><font size="-1">you are in...</font> </font><font
+ color="#330000"><font size="+2"> Main\Definitions</font></font></b></center>
+<p><b>&nbsp;&nbsp;&nbsp; Definition 1. </b>A<b> generalized Toffoli
+gate
+TOF(x<sub> 1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>; x<sub>n+1</sub>)</b>
+is a gate which maps a Boolean pattern (x<sup>0</sup><sub>1</sub>, x<sup>
+0</sup><sub> 2</sub>, ..., x<sup>0</sup><sub>n</sub>, x<sup>0</sup><sub>n+1</sub>
+) to (x<sup>0</sup><sub>1</sub>, x<sup>0</sup><sub>2</sub>, ..., x<sup>0</sup><sub>
+n</sub>, x<sup>0</sup><sub>n+1</sub>+ x<sup>0</sup><sub>1</sub>x<sup>0</sup><sub>
+2</sub>...x<sup>0</sup><sub>n</sub>), where "+" is a modula-2 addition.
+In a machine-readable format such gate will be written as "<font
+ face="Arial,Helvetica"> t</font>", number of inputs (n+1), and "<font
+ face="Arial,Helvetica">x<sub> 1</sub>,x<sub>2</sub>,... ,x<sub>n</sub>,x<sub>n+1</sub></font>".
+<br>
+&nbsp;&nbsp;&nbsp; <i>Examples.</i> </p>
+<ul>
+  <li> NOT gate is a TOF(&Oslash;;a) gate.</li>
+  <li> CNOT gate is a TOF(a;b) gate.</li>
+  <li> Original Toffoli gate is a TOF(a,b;c).</li>
+</ul>
+&nbsp;&nbsp;&nbsp;&nbsp; <b>Definition 2. </b>A<b> generalized
+Fredkin
+gate FRE(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>; x<sub>n+1</sub>
+, x<sub> n+2</sub>)</b> is a gate which maps Boolean pattern (x<sup>0</sup><sub>
+1</sub> , x<sup>0</sup><sub>2</sub>, ..., x<sup>0</sup><sub>n</sub>, x<sup>
+0</sup><sub> n+1</sub>, x<sup>0</sup><sub>n+2</sub>) to (x<sup>0</sup><sub>
+1</sub>, x<sup> 0</sup><sub>2</sub>, ..., x<sup>0</sup><sub>n</sub>, x<sup>
+0</sup><sub>n+2</sub> , x<sup>0</sup><sub>n+1</sub>) if and only if
+Boolean
+product x<sup>0</sup><sub> 1</sub>x<sup>0</sup><sub>2</sub>... x<sup>0</sup><sub>
+n</sub> = 1, otherwise passes the pattern unchanged. In a
+machine-readable
+format such gate will be written as "f", number of inputs (n+2), and "<font
+ face="Arial,Helvetica"> x<sub>1</sub>,x<sub>2</sub>,... ,x<sub>n</sub>,x<sub>n+1</sub>,x<sub>n+2</sub></font>
+". <br>
+&nbsp;&nbsp;&nbsp; <i>Examples.</i>
+<ul>
+  <li> SWAP gate is a FRE(&Oslash;;a,b) gate.</li>
+  <li> Original Fredkin gate is a FRE(a;b,c) gate.</li>
+</ul>
+&nbsp;&nbsp;&nbsp;<b> Quantum cost</b> is found based on the reported
+quantum costs of the generalized Toffoli and generalized Fredkin gates
+by the following procedure.
+<p>&nbsp;&nbsp;&nbsp; In our calculations, quantum cost of the
+generalized Toffoli gates is taken from the following table, according
+to the known
+to us published results on their cost (a paper by <a
+ href="http://prola.aps.org/abstract/PRA/v52/i5/p3457_1"> Barenco <i>et
+al.</i></a> and its optimizations <a href="papers/0403053.pdf">one</a>
+and <a href="papers/09G_3_586.pdf">two</a>). <br>
+&nbsp;</p>
+<center>
+<table border="1" cols="4" width="45%">
+  <tbody>
+    <tr align="center">
+      <th nowrap="true">Size (n)<br>
+      </th>
+      <td><b>Garbage</b></td>
+      <th nowrap="true">Name</th>
+      <th nowrap="true">Quantum Cost</th>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">1</td>
+      <td>0</td>
+      <td>NOT, t1</td>
+      <td>1</td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">2</td>
+      <td>0</td>
+      <td>CNOT, t2</td>
+      <td>1</td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">3</td>
+      <td>0</td>
+      <td>Toffoli, t3</td>
+      <td>5</td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">4</td>
+      <td>0</td>
+      <td>Toffoli4, t4</td>
+      <td>13</td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">5</td>
+      <td>0</td>
+      <td>t5</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">5<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">2<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">t5<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">26<br>
+      </td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">6</td>
+      <td>0</td>
+      <td>t6</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap="true">
+      <div align="center">6<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">1<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">t6<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">52<br>
+      </div>
+      </td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">
+      <div align="center">6</div>
+      </td>
+      <td>
+      <div align="center">3</div>
+      </td>
+      <td>
+      <div align="center">t6</div>
+      </td>
+      <td>38<br>
+      </td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">
+      <div align="center">7</div>
+      </td>
+      <td>
+      <div align="center">0</div>
+      </td>
+      <td>
+      <div align="center">t7</div>
+      </td>
+      <td>
+      <div align="center">125</div>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap="true">
+      <div align="center">7<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">1<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">t7<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">80<br>
+      </div>
+      </td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">
+      <div align="center">7</div>
+      </td>
+      <td>
+      <div align="center">4</div>
+      </td>
+      <td>
+      <div align="center">t7</div>
+      </td>
+      <td>50<br>
+      </td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">
+      <div align="center">8</div>
+      </td>
+      <td>
+      <div align="center">0</div>
+      </td>
+      <td>
+      <div align="center">t8</div>
+      </td>
+      <td>
+      <div align="center">253</div>
+      </td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">
+      <div align="center">8</div>
+      </td>
+      <td>
+      <div align="center">1</div>
+      </td>
+      <td>
+      <div align="center">t8</div>
+      </td>
+      <td>
+      <div align="center">100<a href="t8%201%20116.tfc"></a> </div>
+      </td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">
+      <div align="center">8</div>
+      </td>
+      <td>5<br>
+      </td>
+      <td>
+      <div align="center">t8</div>
+      </td>
+      <td>62<br>
+      </td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">
+      <div align="center">9</div>
+      </td>
+      <td>
+      <div align="center">0</div>
+      </td>
+      <td>
+      <div align="center">t9</div>
+      </td>
+      <td>
+      <div align="center">509</div>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap="true">
+      <div align="center">9<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">1<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">t9<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">128<br>
+      </div>
+      </td>
+    </tr>
+    <tr align="center">
+      <td nowrap="true">
+      <div align="center">9</div>
+      </td>
+      <td>6<br>
+      </td>
+      <td>
+      <div align="center">t9</div>
+      </td>
+      <td>74<br>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap="true">
+      <div align="center">10<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">0<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">t10<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">1021<br>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap="true">
+      <div align="center">10<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">1<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">t10<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">152<br>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap="true">
+      <div align="center">10<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">7<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">t10<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">86<br>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap="true">
+      <div align="center">n &gt; 10<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">0<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">tn<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">2<sup>n</sup> - 3<br>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap="true">
+      <div align="center">
+      <div align="center">n &gt; 10<br>
+      </div>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">1<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">tn<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">24n - 88<br>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" nowrap="true">
+      <div align="center">
+      <div align="center">&nbsp;n &gt; 10 <br>
+      </div>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">n-3<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">tn<br>
+      </div>
+      </td>
+      <td valign="top">
+      <div align="center">12n - 34<br>
+      </div>
+      </td>
+    </tr>
+  </tbody><caption><b>Table </b>: Toffoli gate costs<br>
+  </caption>
+</table>
+</center>
+<p>&nbsp;&nbsp;&nbsp; The cost of a size <span
+ style="font-style: italic;">n</span> Fredkin gate is calculated by
+the formula: cost of size <span style="font-style: italic;">n</span>
+Toffoli gate plus 2, as the size <span style="font-style: italic;">n</span>
+Fredkin gate
+can be efficiently simulated by a size <span
+ style="font-style: italic;">n</span> Toffoli gate and 2 CNOTs. <br>
+&nbsp;&nbsp;&nbsp; The cost calculator finds each gate in these two
+tables and takes the minimal cost (if several gate implementations are
+known) with the condition that sum of values in columns Size and
+Garbage of this implementation does not exceed the number of lines in
+the analyzed circuit. Then, if a sequence of gates TOF(a,b,c)TOF(a,b)
+(Peres gate) or TOF(a,b)TOF(a,b,c) (inverse of Peres gate), its cost is
+set to be 4 (instead of expected 5+1 = 6), since a quantum
+implementation of each of these patterns was found with cost 4. <br>
+&nbsp;&nbsp;&nbsp; As the new quantum costs for any of the above gates
+are found, the table and quantum cost calculator will be updated. </p>
+</body>
+</html>
